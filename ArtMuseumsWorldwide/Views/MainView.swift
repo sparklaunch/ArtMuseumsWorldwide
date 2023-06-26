@@ -17,7 +17,7 @@ struct MainView: View {
                 NavigationLink {
                     ArtMuseumView(artMuseum: artMuseum)
                 } label: {
-                    Text(artMuseum.name)
+                    ArtMuseumRow(artMuseum: artMuseum)
                 }
             }
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
@@ -36,6 +36,7 @@ struct MainView: View {
                 SortingSheet()
             }
         }
+        .navigationViewStyle(.stack)
     }
 }
 
