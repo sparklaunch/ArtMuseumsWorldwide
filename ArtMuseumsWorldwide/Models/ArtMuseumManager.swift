@@ -9,6 +9,8 @@ import SwiftUI
 
 @MainActor class ArtMuseumManager: ObservableObject {
     @Published private var _artMuseums: [ArtMuseum] = []
+    @Published var sortingStrategy: SortingStrategy = .name
+    @Published var ascending = true
     private var cacheDirectory: URL {
         let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         return documentDirectory.appendingPathComponent("Cache")
@@ -21,11 +23,38 @@ import SwiftUI
             _artMuseums = newValue
         }
     }
+    func resetSortingRules() {
+        sortingStrategy = .name
+        ascending = true
+    }
     func filteredArtMuseums(with searchText: String) -> [ArtMuseum] {
+        let temporaryArtMuseums: [ArtMuseum]
+        switch sortingStrategy {
+            case .name:
+                temporaryArtMuseums = artMuseums.sorted {
+                    ascending ? $0.name < $1.name : $0.name > $1.name
+                }
+            case .city:
+                temporaryArtMuseums = artMuseums.sorted {
+                    ascending ? $0.city < $1.city : $0.city > $1.city
+                }
+            case .country:
+                temporaryArtMuseums = artMuseums.sorted {
+                    ascending ? $0.country < $1.country : $0.country > $1.country
+                }
+            case .space:
+                temporaryArtMuseums = artMuseums.sorted {
+                    ascending ? $0.space < $1.space : $0.space > $1.space
+                }
+            case .established:
+                temporaryArtMuseums = artMuseums.sorted {
+                    ascending ? $0.established < $1.established : $0.established > $1.established
+                }
+        }
         if searchText.isEmpty {
-            return artMuseums
+            return temporaryArtMuseums
         } else {
-            return artMuseums.filter { artMuseum in
+            return temporaryArtMuseums.filter { artMuseum in
                 artMuseum.name.localizedCaseInsensitiveContains(searchText)
             }
         }

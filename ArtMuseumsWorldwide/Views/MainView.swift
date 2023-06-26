@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject private var artMuseumManager: ArtMuseumManager
     @State private var searchText = ""
+    @State private var showingSortingSheet = false
     var body: some View {
         NavigationView {
             List(artMuseumManager.filteredArtMuseums(with: searchText)) { artMuseum in
@@ -22,6 +23,18 @@ struct MainView: View {
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
             .autocorrectionDisabled()
             .navigationTitle("Art Museums (\(artMuseumManager.filteredArtMuseums(with: searchText).count))")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showingSortingSheet = true
+                    } label: {
+                        Label("Sort", systemImage: "slider.horizontal.3")
+                    }
+                }
+            }
+            .sheet(isPresented: $showingSortingSheet) {
+                SortingSheet()
+            }
         }
     }
 }
