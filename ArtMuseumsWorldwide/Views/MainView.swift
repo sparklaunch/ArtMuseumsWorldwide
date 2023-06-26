@@ -15,7 +15,7 @@ struct MainView: View {
         NavigationView {
             List(artMuseumManager.filteredArtMuseums(with: searchText)) { artMuseum in
                 NavigationLink {
-
+                    ArtMuseumView(artMuseum: artMuseum)
                 } label: {
                     Text(artMuseum.name)
                 }

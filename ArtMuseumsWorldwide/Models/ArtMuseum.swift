@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ArtMuseum: Identifiable, Codable {
+    static let example = ArtMuseum(name: "British Museum", city: "London", country: "United Kingdom", space: 92000, established: 1753)
     var id: String {
         name
     }
