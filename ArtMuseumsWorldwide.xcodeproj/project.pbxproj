@@ -12,6 +12,8 @@
 		90DB5E0B2A494BB40086C8C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90DB5E0A2A494BB40086C8C7 /* Assets.xcassets */; };
 		90DB5E0F2A494BB40086C8C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90DB5E0E2A494BB40086C8C7 /* Preview Assets.xcassets */; };
 		90DB5E1A2A494DBD0086C8C7 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 90DB5E192A494DBD0086C8C7 /* data.csv */; };
+		90DB5E1C2A49629D0086C8C7 /* ArtMuseumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DB5E1B2A49629D0086C8C7 /* ArtMuseumManager.swift */; };
+		90DB5E1E2A4962BF0086C8C7 /* ArtMuseum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DB5E1D2A4962BF0086C8C7 /* ArtMuseum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		90DB5E0C2A494BB40086C8C7 /* ArtMuseumsWorldwide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArtMuseumsWorldwide.entitlements; sourceTree = "<group>"; };
 		90DB5E0E2A494BB40086C8C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		90DB5E192A494DBD0086C8C7 /* data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
+		90DB5E1B2A49629D0086C8C7 /* ArtMuseumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtMuseumManager.swift; sourceTree = "<group>"; };
+		90DB5E1D2A4962BF0086C8C7 /* ArtMuseum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtMuseum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				90DB5E192A494DBD0086C8C7 /* data.csv */,
+				90DB5E1B2A49629D0086C8C7 /* ArtMuseumManager.swift */,
+				90DB5E1D2A4962BF0086C8C7 /* ArtMuseum.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,7 +166,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				90DB5E092A494BB30086C8C7 /* ContentView.swift in Sources */,
+				90DB5E1E2A4962BF0086C8C7 /* ArtMuseum.swift in Sources */,
 				90DB5E072A494BB30086C8C7 /* ArtMuseumsWorldwideApp.swift in Sources */,
+				90DB5E1C2A49629D0086C8C7 /* ArtMuseumManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

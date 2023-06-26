@@ -8,19 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var artMuseumManager: ArtMuseumManager
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List(artMuseumManager.artMuseums) { artMuseum in
+                NavigationLink {
+
+                } label: {
+                    Text(artMuseum.name)
+                }
+            }
+            .navigationTitle("Art Museums (\(artMuseumManager.artMuseums.count))")
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ArtMuseumManager())
     }
 }

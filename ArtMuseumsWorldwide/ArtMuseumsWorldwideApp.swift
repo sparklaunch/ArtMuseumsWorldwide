@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ArtMuseumsWorldwideApp: App {
+    @StateObject private var artMuseumManager = ArtMuseumManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(artMuseumManager)
         }
     }
 }

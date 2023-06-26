@@ -1,4 +1,3 @@
-Name,City,Country,Gallery Space,Year Established
 British Museum,London,United Kingdom,92000,1753
 Louvre,Paris,France,72735,1792
 State Hermitage Museum,St. Petersburg,Russia,66842,1764
@@ -49,7 +48,7 @@ Milwaukee Art Museum,Milwaukee,United States,13196,1882
 Bavarian National Museum,Munich,Germany,13000,1855
 Capital Museum,Beijing,China,13000,1981
 Montreal Museum of Fine Arts,Montreal,Canada,13000,1860
-National Gallery,London,United Kingdom,13000,1824
+National Gallery (UK),London,United Kingdom,13000,1824
 National Gallery of Victoria,Melbourne,Australia,19600,1861
 Palais de Tokyo,Paris,France,13000,2001
 Salar Jung Museum,Hyderabad,India,13000,1855
@@ -90,12 +89,12 @@ MMCA Seoul,Seoul,South Korea,10000,2013
 Saint Louis Art Museum,St. Louis,United States,10000,1881
 Tel Aviv Museum of Art,Tel Aviv,Israel,10000,1932
 National Palace Museum,Taipei,Taiwan,9613,1925
-National Archaeological Museum,Madrid,Spain,9300,1867
+National Archaeological Museum (Spain),Madrid,Spain,9300,1867
 Musée Fabre,Montpellier,France,9300,1828
 Pinacoteca do Estado de São Paulo,São Paulo,Brazil,9112,1905
 Bardo National Museum,Tunis,Tunisia,9000,1888
 Cité de l'Architecture et du Patrimoine,Paris,France,9000,1879
-National Gallery,Oslo,Norway,9000,1842
+National Gallery (Norway),Oslo,Norway,9000,1842
 Power Station of Art (Biennale),Shanghai,China,9000,2012
 De Young Museum,San Francisco,United States,8919,1895
 Smithsonian American Art Museum,Washington D.C.,United States,8800,1829
@@ -107,7 +106,7 @@ National Art Museum of China,Beijing,China,8300,1958
 Gemäldegalerie,Berlin,Germany,8000,1830
 Louvre Abu Dhabi,Abu Dhabi,UAE,8000,2017
 Museum Ludwig,Cologne,Germany,8000,1976
-National Archaeological Museum,Athens,Greece,8000,1866
+National Archaeological Museum (Greece),Athens,Greece,8000,1866
 Neues Museum,Berlin,Germany,8000,1855
 Petit Palais,Paris,France,8000,1902
 Stedelijk Museum,Amsterdam,Netherlands,8000,1874
