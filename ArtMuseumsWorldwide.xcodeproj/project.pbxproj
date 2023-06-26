@@ -14,6 +14,8 @@
 		90DB5E1A2A494DBD0086C8C7 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 90DB5E192A494DBD0086C8C7 /* data.csv */; };
 		90DB5E1C2A49629D0086C8C7 /* ArtMuseumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DB5E1B2A49629D0086C8C7 /* ArtMuseumManager.swift */; };
 		90DB5E1E2A4962BF0086C8C7 /* ArtMuseum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DB5E1D2A4962BF0086C8C7 /* ArtMuseum.swift */; };
+		90DB5E202A4968ED0086C8C7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DB5E1F2A4968ED0086C8C7 /* MainView.swift */; };
+		90DB5E222A4969B60086C8C7 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DB5E212A4969B60086C8C7 /* FavoritesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		90DB5E192A494DBD0086C8C7 /* data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
 		90DB5E1B2A49629D0086C8C7 /* ArtMuseumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtMuseumManager.swift; sourceTree = "<group>"; };
 		90DB5E1D2A4962BF0086C8C7 /* ArtMuseum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtMuseum.swift; sourceTree = "<group>"; };
+		90DB5E1F2A4968ED0086C8C7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		90DB5E212A4969B60086C8C7 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				90DB5E082A494BB30086C8C7 /* ContentView.swift */,
+				90DB5E1F2A4968ED0086C8C7 /* MainView.swift */,
+				90DB5E212A4969B60086C8C7 /* FavoritesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,7 +173,9 @@
 			files = (
 				90DB5E092A494BB30086C8C7 /* ContentView.swift in Sources */,
 				90DB5E1E2A4962BF0086C8C7 /* ArtMuseum.swift in Sources */,
+				90DB5E222A4969B60086C8C7 /* FavoritesView.swift in Sources */,
 				90DB5E072A494BB30086C8C7 /* ArtMuseumsWorldwideApp.swift in Sources */,
+				90DB5E202A4968ED0086C8C7 /* MainView.swift in Sources */,
 				90DB5E1C2A49629D0086C8C7 /* ArtMuseumManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
