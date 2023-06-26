@@ -21,6 +21,15 @@ import SwiftUI
             _artMuseums = newValue
         }
     }
+    func filteredArtMuseums(with searchText: String) -> [ArtMuseum] {
+        if searchText.isEmpty {
+            return artMuseums
+        } else {
+            return artMuseums.filter { artMuseum in
+                artMuseum.name.localizedCaseInsensitiveContains(searchText)
+            }
+        }
+    }
     private func initializeData() {
         let dataURL = Bundle.main.url(forResource: "data", withExtension: "csv")!
         guard let stringData = try? String(contentsOf: dataURL) else {

@@ -9,16 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject private var artMuseumManager: ArtMuseumManager
+    @State private var searchText = ""
     var body: some View {
         NavigationView {
-            List(artMuseumManager.artMuseums) { artMuseum in
+            List(artMuseumManager.filteredArtMuseums(with: searchText)) { artMuseum in
                 NavigationLink {
 
                 } label: {
                     Text(artMuseum.name)
                 }
             }
-            .navigationTitle("Art Museums (\(artMuseumManager.artMuseums.count))")
+            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
+            .autocorrectionDisabled()
+            .navigationTitle("Art Museums (\(artMuseumManager.filteredArtMuseums(with: searchText).count))")
         }
     }
 }
