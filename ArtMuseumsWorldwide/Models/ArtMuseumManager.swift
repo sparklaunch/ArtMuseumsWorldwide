@@ -92,13 +92,17 @@ import SwiftUI
     }
     private func loadData() {
         if let cacheData = try? Data(contentsOf: cacheDirectory) {
+            #if DEBUG
             print("Found the cache.")
+            #endif
             guard let decodedData = try? JSONDecoder().decode([ArtMuseum].self, from: cacheData) else {
                 fatalError("Failed to decode data.")
             }
             artMuseums = decodedData
         } else {
+            #if DEBUG
             print("Not found the cache.")
+            #endif
             initializeData()
             saveCache()
         }

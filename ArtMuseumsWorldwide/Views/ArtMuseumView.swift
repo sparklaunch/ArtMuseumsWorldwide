@@ -17,9 +17,13 @@ struct ArtMuseumView: View {
                     .scaledToFill()
                     .frame(maxWidth: .infinity, maxHeight: 300)
                     .clipped()
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 10) {
                     Text(artMuseum.name)
                         .font(.largeTitle.bold())
+                    Text("Location: \(artMuseum.city), \(artMuseum.country).")
+                        .font(.title3.weight(.semibold))
+                    Text(verbatim: "Established in \(artMuseum.established) CE.")
+                    Text("Space: \(artMuseum.space)\u{33A1}.")
                     Spacer()
                 }
                 .padding()
