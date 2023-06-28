@@ -38,6 +38,7 @@
 		90DB5E252A496AC00086C8C7 /* SortingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingStrategy.swift; sourceTree = "<group>"; };
 		90DB5E272A4970BD0086C8C7 /* ArtMuseumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtMuseumView.swift; sourceTree = "<group>"; };
 		90DB5E292A49726B0086C8C7 /* ArtMuseumRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtMuseumRow.swift; sourceTree = "<group>"; };
+		90DB5E2B2A4BE6600086C8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 		90DB5E052A494BB30086C8C7 /* ArtMuseumsWorldwide */ = {
 			isa = PBXGroup;
 			children = (
+				90DB5E2B2A4BE6600086C8C7 /* Info.plist */,
 				90DB5E162A494C3B0086C8C7 /* Models */,
 				90DB5E152A494C2C0086C8C7 /* Views */,
 				90DB5E062A494BB30086C8C7 /* ArtMuseumsWorldwideApp.swift */,
@@ -321,6 +323,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArtMuseumsWorldwide/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Art Museums Worldwide";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -363,6 +366,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArtMuseumsWorldwide/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Art Museums Worldwide";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
