@@ -9,7 +9,10 @@ import SwiftUI
 
 @MainActor class FavoriteManager: ObservableObject {
     @Published private var _favorites: [ArtMuseum] = []
-    private let key = "Favorites"
+    private var dataURL: URL {
+        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        return documentDirectory.appendingPathComponent("Favorites")
+    }
     var favorites: [ArtMuseum] {
         get {
             _favorites.sorted()
@@ -44,10 +47,14 @@ import SwiftUI
         guard let encodedData = try? JSONEncoder().encode(favorites) else {
             fatalError("Failed to encode data.")
         }
-        UserDefaults.standard.set(encodedData, forKey: key)
+        do {
+            try encodedData.write(to: dataURL, options: [.atomic, .completeFileProtection])
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     private func load() {
-        if let data = UserDefaults.standard.data(forKey: key) {
+        if let data = try? Data(contentsOf: dataURL) {
             guard let decodedData = try? JSONDecoder().decode([ArtMuseum].self, from: data) else {
                 fatalError("Failed to decode data.")
             }
@@ -55,6 +62,10 @@ import SwiftUI
         } else {
             favorites = []
         }
+    }
+    func delete(at offsets: IndexSet) {
+        favorites.remove(atOffsets: offsets)
+        save()
     }
     init() {
         load()

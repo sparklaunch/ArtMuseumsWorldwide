@@ -18,6 +18,7 @@ struct FavoritesView: View {
                         ArtMuseumView(artMuseum: favorite)
                     }
                 }
+                .onDelete(perform: favoriteManager.delete)
             }
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
             .autocorrectionDisabled()
