@@ -10,7 +10,22 @@ import SwiftUI
 struct ArtMuseumView: View {
     let artMuseum: ArtMuseum
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack(alignment: .leading) {
+                Image(artMuseum.imageName)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: .infinity, maxHeight: 300)
+                    .clipped()
+                VStack(alignment: .leading) {
+                    Text(artMuseum.name)
+                        .font(.largeTitle.bold())
+                    Spacer()
+                }
+                .padding()
+            }
+        }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

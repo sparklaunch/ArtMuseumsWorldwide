@@ -17,6 +17,9 @@ struct ArtMuseum: Identifiable, Codable {
     let country: String
     let space: Int
     let established: Int
+    var imageName: String {
+        name.capitalized.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: ":", with: "")
+    }
 }
 
 extension ArtMuseum: Comparable {
