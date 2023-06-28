@@ -14,12 +14,14 @@ struct FavoritesView: View {
         NavigationView {
             List {
                 ForEach(favoriteManager.filteredFavorites(with: searchText)) { favorite in
-                    Text(favorite.name)
+                    NavigationLink(favorite.name) {
+                        ArtMuseumView(artMuseum: favorite)
+                    }
                 }
             }
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
             .autocorrectionDisabled()
-            .navigationTitle("Favorites")
+            .navigationTitle("Favorites (\(favoriteManager.filteredFavorites(with: searchText).count))")
         }
         .navigationViewStyle(.stack)
     }
