@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    @EnvironmentObject private var favoriteManager: FavoriteManager
+    @State private var searchText = ""
     var body: some View {
         NavigationView {
-            
+            List {
+                ForEach(favoriteManager.filteredFavorites(with: searchText)) { favorite in
+                    Text(favorite.name)
+                }
+            }
+            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
+            .autocorrectionDisabled()
+            .navigationTitle("Favorites")
         }
         .navigationViewStyle(.stack)
     }
@@ -19,5 +28,6 @@ struct FavoritesView: View {
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {
         FavoritesView()
+            .environmentObject(FavoriteManager())
     }
 }

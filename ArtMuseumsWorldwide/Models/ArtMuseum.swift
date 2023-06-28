@@ -27,3 +27,9 @@ extension ArtMuseum: Comparable {
         lhs.name < rhs.name
     }
 }
+
+extension ArtMuseum: Equatable {
+    static func ==(lhs: ArtMuseum, rhs: ArtMuseum) -> Bool {
+        lhs.name == rhs.name
+    }
+}

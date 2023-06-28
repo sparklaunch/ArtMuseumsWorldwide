@@ -20,6 +20,7 @@
 		90DB5E262A496AC00086C8C7 /* SortingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DB5E252A496AC00086C8C7 /* SortingStrategy.swift */; };
 		90DB5E282A4970BD0086C8C7 /* ArtMuseumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DB5E272A4970BD0086C8C7 /* ArtMuseumView.swift */; };
 		90DB5E2A2A49726B0086C8C7 /* ArtMuseumRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DB5E292A49726B0086C8C7 /* ArtMuseumRow.swift */; };
+		90DB5E2D2A4C3D9C0086C8C7 /* FavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DB5E2C2A4C3D9C0086C8C7 /* FavoriteManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		90DB5E272A4970BD0086C8C7 /* ArtMuseumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtMuseumView.swift; sourceTree = "<group>"; };
 		90DB5E292A49726B0086C8C7 /* ArtMuseumRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtMuseumRow.swift; sourceTree = "<group>"; };
 		90DB5E2B2A4BE6600086C8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		90DB5E2C2A4C3D9C0086C8C7 /* FavoriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				90DB5E1B2A49629D0086C8C7 /* ArtMuseumManager.swift */,
 				90DB5E1D2A4962BF0086C8C7 /* ArtMuseum.swift */,
 				90DB5E252A496AC00086C8C7 /* SortingStrategy.swift */,
+				90DB5E2C2A4C3D9C0086C8C7 /* FavoriteManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				90DB5E1E2A4962BF0086C8C7 /* ArtMuseum.swift in Sources */,
 				90DB5E222A4969B60086C8C7 /* FavoritesView.swift in Sources */,
 				90DB5E2A2A49726B0086C8C7 /* ArtMuseumRow.swift in Sources */,
+				90DB5E2D2A4C3D9C0086C8C7 /* FavoriteManager.swift in Sources */,
 				90DB5E072A494BB30086C8C7 /* ArtMuseumsWorldwideApp.swift in Sources */,
 				90DB5E202A4968ED0086C8C7 /* MainView.swift in Sources */,
 				90DB5E242A496A8A0086C8C7 /* SortingSheet.swift in Sources */,

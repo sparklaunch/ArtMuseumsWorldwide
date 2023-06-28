@@ -10,10 +10,12 @@ import SwiftUI
 @main
 struct ArtMuseumsWorldwideApp: App {
     @StateObject private var artMuseumManager = ArtMuseumManager()
+    @StateObject private var favoriteManager = FavoriteManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(artMuseumManager)
+                .environmentObject(favoriteManager)
         }
     }
 }
